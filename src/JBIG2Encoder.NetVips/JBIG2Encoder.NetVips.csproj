@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>JBIG2Encoder.NetVips</RootNamespace>
+    <AssemblyName>JBIG2Encoder.NetVips</AssemblyName>
+    <PackageId>JBIG2Encoder.NetVips</PackageId>
+    <Description>JBIG2 encoder extension methods for NetVips (libvips) images.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NetVips" Version="3.2.0" />
+    <ProjectReference Include="..\JBIG2Encoder\JBIG2Encoder.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="..\..\NOTICE" Pack="true" PackagePath="\" Visible="false" />
+  </ItemGroup>
+
+</Project>

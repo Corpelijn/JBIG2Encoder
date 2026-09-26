@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageReference Include="Xunit.SkippableFact" Version="1.4.13" />
+    <!-- Independent decoder used only as a test oracle (MIT). -->
+    <PackageReference Include="JBig2Decoder.NETStandard" Version="1.5.2" />
+
+    <!-- The adapters reference a minimum SkiaSharp; test against the newest stable one. -->
+    <PackageReference Include="SkiaSharp" Version="4.152.1" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Win32" Version="4.152.1" Condition="$([MSBuild]::IsOSPlatform('Windows'))" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="4.152.1" Condition="$([MSBuild]::IsOSPlatform('Linux'))" />
+    <PackageReference Include="SkiaSharp.NativeAssets.macOS" Version="4.152.1" Condition="$([MSBuild]::IsOSPlatform('OSX'))" />
+
+    <!-- libvips binaries for NetVips (test-time only). -->
+    <PackageReference Include="NetVips.Native.win-x64" Version="8.18.6" Condition="$([MSBuild]::IsOSPlatform('Windows'))" />
+    <PackageReference Include="NetVips.Native.linux-x64" Version="8.18.6" Condition="$([MSBuild]::IsOSPlatform('Linux'))" />
+    <PackageReference Include="NetVips.Native.osx-arm64" Version="8.18.6" Condition="$([MSBuild]::IsOSPlatform('OSX'))" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\JBIG2Encoder.ImageSharp\JBIG2Encoder.ImageSharp.csproj" />
+    <ProjectReference Include="..\..\src\JBIG2Encoder.SkiaSharp\JBIG2Encoder.SkiaSharp.csproj" />
+    <ProjectReference Include="..\..\src\JBIG2Encoder.NetVips\JBIG2Encoder.NetVips.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Shared oracles and image generators from the core test project. -->
+    <Compile Include="..\JBIG2Encoder.Tests\TestSupport\TestImages.cs" Link="TestSupport\TestImages.cs" />
+    <Compile Include="..\JBIG2Encoder.Tests\TestSupport\Oracles.cs" Link="TestSupport\Oracles.cs" />
+    <Compile Include="..\JBIG2Encoder.Tests\TestSupport\PopplerOracle.cs" Link="TestSupport\PopplerOracle.cs" />
+    <Compile Include="..\JBIG2Encoder.Tests\TestSupport\PdfBuilder.cs" Link="TestSupport\PdfBuilder.cs" />
+  </ItemGroup>
+
+</Project>

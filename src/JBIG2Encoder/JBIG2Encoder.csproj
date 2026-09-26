@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>JBIG2Encoder</RootNamespace>
+    <AssemblyName>JBIG2Encoder</AssemblyName>
+    <Description>Pure managed JBIG2 encoder (generic region, lossless; symbol/text region, lossy). A C# port of the algorithms in agl/jbig2enc with no native dependencies.</Description>
+    <PackageId>JBIG2Encoder</PackageId>
+    <!-- The core library deliberately has zero package dependencies. -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="JBIG2Encoder.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="..\..\NOTICE" Pack="true" PackagePath="\" Visible="false" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>JBIG2Encoder.SkiaSharp</RootNamespace>
+    <AssemblyName>JBIG2Encoder.SkiaSharp</AssemblyName>
+    <PackageId>JBIG2Encoder.SkiaSharp</PackageId>
+    <Description>JBIG2 encoder extension methods for SkiaSharp (SKBitmap, SKPixmap, SKImage).</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp" Version="3.119.4" />
+    <ProjectReference Include="..\JBIG2Encoder\JBIG2Encoder.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="..\..\NOTICE" Pack="true" PackagePath="\" Visible="false" />
+  </ItemGroup>
+
+</Project>

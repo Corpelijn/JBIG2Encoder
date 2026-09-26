@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ReferenceComparison</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <!-- Server GC off, tiered compilation left at its defaults: this is what a normal application gets. -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JBig2Decoder.NETStandard" Version="1.5.2" />
+    <PackageReference Include="SkiaSharp" Version="3.119.4" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Win32" Version="3.119.4" Condition="$([MSBuild]::IsOSPlatform('Windows'))" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="3.119.4" Condition="$([MSBuild]::IsOSPlatform('Linux'))" />
+    <PackageReference Include="SkiaSharp.NativeAssets.macOS" Version="3.119.4" Condition="$([MSBuild]::IsOSPlatform('OSX'))" />
+    <ProjectReference Include="..\..\src\JBIG2Encoder.SkiaSharp\JBIG2Encoder.SkiaSharp.csproj" />
+    <Compile Include="..\..\tests\JBIG2Encoder.Tests\TestSupport\TestImages.cs" Link="TestImages.cs" />
+    <Compile Include="..\..\tests\JBIG2Encoder.Tests\TestSupport\Oracles.cs" Link="Oracles.cs" />
+  </ItemGroup>
+
+</Project>

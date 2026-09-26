@@ -1,0 +1,61 @@
+JBIG2Encoder
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This project is a C# port of algorithms and file-format handling found in the
+following third-party software. Their notices are reproduced or referenced here
+as required by their licenses.
+
+--------------------------------------------------------------------------------
+jbig2enc (https://github.com/agl/jbig2enc)
+
+  Copyright 2006 Google Inc. All Rights Reserved.
+  Author: Adam Langley (agl@imperialviolet.org)
+
+  Licensed under the Apache License, Version 2.0.
+
+  Ported components: the JBIG2 arithmetic (MQ) encoder and integer/IAID
+  encoding procedures (jbig2arith.cc), generic region encoding with TPGD,
+  segment/file/page structure writing (jbig2enc.cc, jbig2structs.h,
+  jbig2segments.h), symbol dictionary and text region encoding (jbig2sym.cc),
+  the symbol equivalence test used for automatic thresholding
+  (jbig2comparator.cc) and the multi-page symbol sharing logic.
+
+  jbig2enc's own notice states: "This software is a description of processes
+  which may be patented. Use of this software may require patent licenses in
+  some countries. You are directed to annex I of the JBIG2 specification for
+  information." See also doc/PATENTS in the jbig2enc repository. Users are
+  responsible for their own legal assessment.
+
+--------------------------------------------------------------------------------
+Leptonica (http://www.leptonica.org)
+
+  Copyright (C) 2001-2020 Leptonica. All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+  1. Redistributions of source code must retain the above copyright notice,
+     this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice,
+     this list of conditions and the following disclaimer in the documentation
+     and/or other materials provided with the distribution.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED. IN NO EVENT SHALL ANY CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+  OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  Re-implemented (not linked) algorithms: connected-component extraction
+  (conncomp.c), the windowed correlation classifier and centroid alignment
+  (jbclass.c, correlscore.c), and background normalization for binarization
+  (adaptmap.c).
+
+--------------------------------------------------------------------------------
+ITU-T Recommendation T.88 (ISO/IEC 14492), JBIG2. The specification text is
+used as a reference for behavior and test vectors only; none of it is
+redistributed with this project.

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>JBIG2Encoder.ImageSharp</RootNamespace>
+    <AssemblyName>JBIG2Encoder.ImageSharp</AssemblyName>
+    <PackageId>JBIG2Encoder.ImageSharp</PackageId>
+    <Description>JBIG2 encoder integration for SixLabors ImageSharp 3.x: register the JBIG2 format and encoder, then Image.Save("page.jb2") or SaveAsJbig2().</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Note: ImageSharp 3.x is licensed under the Six Labors Split License, not Apache-2.0. See README. -->
+    <PackageReference Include="SixLabors.ImageSharp" Version="[3.1.12,4.0.0)" />
+    <ProjectReference Include="..\JBIG2Encoder\JBIG2Encoder.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="..\..\NOTICE" Pack="true" PackagePath="\" Visible="false" />
+  </ItemGroup>
+
+</Project>
