@@ -8,6 +8,7 @@
     <Description>Pure managed JBIG2 encoder (generic region, lossless; symbol/text region, lossy). A C# port of the algorithms in agl/jbig2enc with no native dependencies.</Description>
     <PackageId>JBIG2Encoder</PackageId>
     <Version>1.0.0</Version>
+    <RepositoryUrl>https://github.com/Corpelijn/JBIG2Encoder</RepositoryUrl>
     <!-- The core library deliberately has zero package dependencies. -->
   </PropertyGroup>
 

@@ -6,6 +6,11 @@
 > features or support. It is published as-is under the Apache-2.0 license, without warranty of any kind. Evaluate it on your
 > own data and in your own target viewers before relying on it. Forks are welcome.
 
+![NuGet Version](https://img.shields.io/nuget/v/JBIG2Encoder?label=JBIG2Encoder&link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FJBIG2Encoder)
+![NuGet Version](https://img.shields.io/nuget/v/JBIG2Encoder.ImageSharp?label=JBIG2Encoder.ImageSharp&link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FJBIG2Encoder.ImageSharp)
+![NuGet Version](https://img.shields.io/nuget/v/JBIG2Encoder?label=JBIG2Encoder.SkiaSharp&link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FJBIG2Encoder.SkiaSharp)
+![NuGet Version](https://img.shields.io/nuget/v/JBIG2Encoder?label=JBIG2Encoder.NetVips&link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FJBIG2Encoder.NetVips)
+
 A pure managed **JBIG2 encoder for .NET** — no native libraries, no P/Invoke. It is a C# port of the algorithms in
 [agl/jbig2enc](https://github.com/agl/jbig2enc) (Apache-2.0) with the Leptonica dependency replaced by managed code, plus
 ready-made integrations for **ImageSharp**, **SkiaSharp** and **NetVips**.
