@@ -8,6 +8,7 @@
     <AssemblyName>JBIG2Encoder.SkiaSharp</AssemblyName>
     <PackageId>JBIG2Encoder.SkiaSharp</PackageId>
     <Description>JBIG2 encoder extension methods for SkiaSharp (SKBitmap, SKPixmap, SKImage).</Description>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

@@ -8,6 +8,7 @@
     <AssemblyName>JBIG2Encoder.ImageSharp</AssemblyName>
     <PackageId>JBIG2Encoder.ImageSharp</PackageId>
     <Description>JBIG2 encoder integration for SixLabors ImageSharp 3.x: register the JBIG2 format and encoder, then Image.Save("page.jb2") or SaveAsJbig2().</Description>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
